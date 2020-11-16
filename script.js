@@ -136,7 +136,7 @@ function attemptToBuyProducer(data, producerId) {
         data.producers[i].qty++;
         data.coffee = data.coffee - data.producers[i].price;
         data.producers[i].price = updatePrice(data.producers[i].price);
-        data.totalCPS = data.producers[i].cps;
+        data.totalCPS += data.producers[i].cps;
         return true;
       } else {
         return false;
